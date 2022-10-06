@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+    <form method="POST" >
+        {% csrf_token %}
+        <textarea rows = "1" cols = "10" name="city"></textarea>
+        <button type="submit" name="find">Find</button>
+    </form>
+</body>
+</html>
