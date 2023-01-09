@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title>Surf.dot</title>
+</head>   
+<style>
+   .body{
+    background-image: url("https://www.guide-de-la-vendee.com/_bibli/articlesPage/4/images/st-hilaire-de-riez-feu-de-grosse-terre.jpg?v=ficheArticle&width=1000&height=540&pixelRatio=1.5000");
+     backdrop-filter: blur(5px); 
+     width : 100vw;
+    height : 100vh;
+    background-size: cover;
+    background-repeat: no-repeat; 
+     opacity: 0.4; 
+   }
+   .layer {
+    position: absolute;
+    outline: 450px solid rgba(248, 243, 216, 0.7);
+    top : 50vh ; left : 51vw
+    }
+    .first-txt {
+        position: absolute;
+        top : -47vh;
+        left : -27vw;
+        white-space: nowrap;
+        font-family: "Century Gothic";
+    }
+  
+    .second-txt {
+        position: absolute;
+        top: -35vh;
+        left: -28.5vw;
+        white-space: nowrap;
+        font-family: "Century Gothic";
+    }
+
+    .theme-constructionLocation {
+    position: absolute;
+    top : -20vh;
+    left : -5vw;
+    --radius: 5px;
+    --baseFg: dimgray;
+    --baseBg: white;
+    --accentFg: #006fc2;
+    --accentBg: #bae1ff;
+    }
+    .theme-constructionActivity {
+    position: absolute;
+    top : -20vh;
+    left : -15vw;
+    --radius: 5px;
+    --baseFg: dimgray;
+    --baseBg: white;
+    --accentFg: #006fc2;
+    --accentBg: #bae1ff;
+    }
+    .theme-constructionWeather {
+    position: absolute;
+    top : -20vh;
+    left : 5vw;
+    --radius: 5px;
+    --baseFg: dimgray;
+    --baseBg: white;
+    --accentFg: #006fc2;
+    --accentBg: #bae1ff;
+    }
+
+select {
+  font: 400 12px/1.3 "Century Gothic";
+  -webkit-appearance: none;
+  appearance: none;
+  color: var(--baseFg);
+  border: 1px solid var(--baseFg);
+  line-height: 1.25;
+  outline: 0;
+  padding: 0.65em 2.5em 0.55em 0.75em;
+  border-radius: var(--radius);
+  background-color: var(--baseBg);
+  background-image: linear-gradient(var(--baseFg), var(--baseFg)),
+    linear-gradient(-135deg, transparent 50%, var(--accentBg) 50%),
+    linear-gradient(-225deg, transparent 50%, var(--accentBg) 50%),
+    linear-gradient(var(--accentBg) 42%, var(--accentFg) 42%);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
+  background-position: right 20px center, right bottom, right bottom, right bottom;   
+}
+
+
+
+</style>
+</head>
+<body>
+    <div class="body"></div>
+        <div class="layer">
+            <h1 class="first-txt">Find the best Brittany beach spot with Spot.com !</h1>
+            <h3 class="second-txt">You want to surf ? You want to swim ? Select the parameters and find your dream spot !</h3>
+            <select class="theme-constructionLocation">
+                <option for ="location">Location :</option>
+                <option type = "text" id = "location"></option>
+            </select>
+            <select class="theme-constructionActivity">
+                <option>Activity :</option>
+                <option>Surfing</option>
+                <option>Swimming</option>
+                <option>Chilling</option>
+            </select>
+            <select class="theme-constructionWeather">
+                <option>Weather :</option>
+                <option>Sunny</option>
+                <option>No rain</option>
+                <option>Don't care I'm a surfer</option>
+            </select>
+    </div>
+</body>
+</html>
